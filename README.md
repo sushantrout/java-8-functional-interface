@@ -22,7 +22,7 @@ Among the above four interfaces, the first three interfaces also have extensions
 <li>Function – BiFunction, UnaryOperator, BinaryOperator</li>
   </ol>
   
-  <u>Predicate</u>
+  <b>Predicate</b>
 <ol>
   <li>  public abstract boolean test(T); </li> 
    <li> public java.util.function.Predicate and(java.util.function.Predicate<? super T>);</li> 
