@@ -21,3 +21,12 @@ Among the above four interfaces, the first three interfaces also have extensions
   <li>Predicate – BiPredicate</li>
 <li>Function – BiFunction, UnaryOperator, BinaryOperator</li>
   </ol>
+  
+  <u>Predicate</u>
+<ol>
+  <li>  public abstract boolean test(T); </li> 
+   <li> public java.util.function.Predicate and(java.util.function.Predicate<? super T>);</li> 
+   <li> public java.util.function.Predicate negate();</li> 
+   <li> public java.util.function.Predicate or(java.util.function.Predicate<? super T>);</li>
+   <li> public static java.util.function.Predicate isEqual(java.lang.Object);</li>
+  </ol>
