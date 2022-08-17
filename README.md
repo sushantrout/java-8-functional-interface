@@ -22,11 +22,19 @@ Among the above four interfaces, the first three interfaces also have extensions
 <li>Function – BiFunction, UnaryOperator, BinaryOperator</li>
   </ol>
   
-  <b>Predicate</b>
+  <h3>Predicate</h3>
 <ol>
-  <li>  public abstract boolean test(T); </li> 
-   <li> public java.util.function.Predicate and(java.util.function.Predicate<? super T>);</li> 
-   <li> public java.util.function.Predicate negate();</li> 
-   <li> public java.util.function.Predicate or(java.util.function.Predicate<? super T>);</li>
-   <li> public static java.util.function.Predicate isEqual(java.lang.Object);</li>
+  <li>  public abstract boolean test(T) </li> 
+   <li> public java.util.function.Predicate and(java.util.function.Predicate<? super T>)</li> 
+   <li> public java.util.function.Predicate negate()</li> 
+   <li> public java.util.function.Predicate or(java.util.function.Predicate<? super T>)</li>
+   <li> public static java.util.function.Predicate isEqual(java.lang.Object)</li>
   </ol>
+
+<h3>Function</h3>
+<ol>
+  <li>public abstract R apply(T)</li>
+  <li>public <V> java.util.function.Function<V, R> compose(java.util.function.Function<? super V, ? extends T>)</li>
+  <li>public <V> java.util.function.Function<T, V> andThen(java.util.function.Function<? super R, ? extends V>)</li>
+  <li>public static <T> java.util.function.Function<T, T> identity()</li>
+</ol>
