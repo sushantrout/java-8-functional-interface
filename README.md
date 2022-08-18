@@ -45,3 +45,8 @@ Among the above four interfaces, the first three interfaces also have extensions
   <li>andThen(java.util.function.Consumer&lt;? super T&gt;)</li>
 
 </ol>
+
+<h3>Supplier</h3>
+<ol>
+  <li>T get()</li>
+</ol>
