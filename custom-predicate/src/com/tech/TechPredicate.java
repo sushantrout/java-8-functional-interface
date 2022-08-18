@@ -8,6 +8,6 @@ public interface TechPredicate<T> {
 	
 	public default TechPredicate<T> and(TechPredicate<T> after) {
 		Objects.requireNonNull(after);
-		return t -> this.test(t) && after.test(t); 
+		return t -> test(t) && after.test(t); 
 	}
 }
