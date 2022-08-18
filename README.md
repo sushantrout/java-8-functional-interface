@@ -43,4 +43,5 @@ Among the above four interfaces, the first three interfaces also have extensions
 <ol>
   <li>accept(T)</li>
   <li>andThen(java.util.function.Consumer&lt;? super T&gt;)</li>
+
 </ol>
