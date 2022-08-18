@@ -38,3 +38,9 @@ Among the above four interfaces, the first three interfaces also have extensions
   <li>public <V> java.util.function.Function<T, V> andThen(java.util.function.Function<? super R, ? extends V>)</li>
   <li>public static <T> java.util.function.Function<T, T> identity()</li>
 </ol>
+
+<h3>Consumer</h3>
+<ol>
+  <li>accept(T)</li>
+  <li>andThen(java.util.function.Consumer&lt;? super T&gt;)</li>
+</ol>
