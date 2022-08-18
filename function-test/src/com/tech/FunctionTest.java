@@ -1,23 +1,31 @@
 package com.tech;
 
-import java.util.List;
 import java.util.function.Function;
 
 public class FunctionTest {
 	public static void main(String[] args) {
-
-		List<Employee> employees = EmployeeProvider.getEmployees();
+		Function<Integer, Integer> multiply = e -> e * 2;
+		Function<Integer, Integer> addition = e -> e + 2;
 		
-		Function<Employee, Integer> getAge = e -> e.getAge();
-		Function<Employee, Integer> getId = e -> e.getId();
+		Integer numberM = multiply.apply(3);
+		System.out.println(numberM);
 		
-		Employee employee = employees.get(0);
-		Integer age = getAge.apply(employee);
-		System.out.println(age);
+		Integer numberP = addition.apply(3);
+		System.out.println(numberP);
 		
-		Integer id = getId.apply(employee);
-		System.out.println(id);
+		/**
+		 * In compose first the parameter function run then the caller
+		 */
+		Function<Integer, Integer> compose = multiply.compose(addition);
+		Integer composeV = compose.apply(3);
+		System.out.println(composeV);
 		
+		Function<Integer, Integer> andThen = multiply.andThen(addition);
+		Integer ansdThenV = andThen.apply(3);
+		System.out.println(ansdThenV);
 		
+		Function<String,String> identity = Function.identity();
+		String apply = identity.apply("Sushant");
+		System.out.println(apply);
 	}
 }
